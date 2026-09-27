@@ -1,0 +1,10 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "description": "Print an ASCII WebTerm robot",
+  "type": "command",
+  "command": "hello",
+  "entry": "hello.js",
+  "author": "z999q",
+  "license": "Apache-2.0"
+}

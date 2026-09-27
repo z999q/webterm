@@ -1,0 +1,20 @@
+{
+  "name": "WebTerm Packages",
+  "version": 1,
+  "packages": [
+    {
+      "name": "hello",
+      "version": "1.0.0",
+      "description": "Print an ASCII WebTerm robot",
+      "type": "command",
+      "entry": "hello.js"
+    },
+    {
+      "name": "weather",
+      "version": "1.0.0",
+      "description": "Show current weather and forecast",
+      "type": "command",
+      "entry": "weather.js"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PPSHIR Security Awareness Lab</title>
+<link rel="stylesheet" href="./style.css">
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+</head>
+<body>
+<main class="card">
+<section id="loading">
+<h1>PPSHIR</h1>
+<p>Connecting to the security-awareness demonstration...</p>
+</section>
+
+<section id="demo" hidden>
+<div class="badge">SECURITY AWARENESS LAB</div>
+<h1>Training Demonstration</h1>
+
+<p class="warning">
+This is an authorized educational simulation.
+Do not enter real personal information.
+</p>
+
+<form id="demoForm">
+<label for="name">Demo name</label>
+<input id="name" name="name" type="text" maxlength="50" placeholder="Example: Test User" required>
+
+<label for="code">Training code</label>
+<input id="code" name="code" type="text" maxlength="20" placeholder="Example: DEMO-1234" required>
+
+<button type="submit">Submit Demo</button>
+</form>
+
+<p id="status"></p>
+</section>
+
+<section id="error" hidden>
+<h1>Connection unavailable</h1>
+<p id="errorText"></p>
+</section>
+</main>
+
+<script src="./app.js"></script>
+</body>
+</html>

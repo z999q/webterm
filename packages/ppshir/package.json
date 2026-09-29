@@ -1,6 +1,6 @@
 {
   "name": "ppshir",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "WebRTC security-awareness demonstration lab",
   "type": "command",
   "command": "ppshir",

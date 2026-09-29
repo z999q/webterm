@@ -15,6 +15,14 @@
       "description": "Show current weather and forecast",
       "type": "command",
       "entry": "weather.js"
+    },
+    {
+      "name": "ppshir",
+      "version": "1.0.0",
+      "description": "WebRTC security-awareness demonstration lab",
+      "type": "command",
+      "command": "ppshir",
+      "entry": "ppshir.js"
     }
   ]
 }

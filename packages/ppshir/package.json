@@ -1,8 +1,7 @@
 {
   "name": "ppshir",
-  "version": "1.0.3",
-  "description": "WebRTC security-awareness demonstration lab",
-  "type": "command",
-  "command": "ppshir",
-  "entry": "ppshir.js"
+  "version": "1.0.4",
+  "description": "WebRTC security-awareness demonstration lab with multiple clearly labeled simulated login scenarios.",
+  "entry": "ppshir.js",
+  "license": "MIT"
 }

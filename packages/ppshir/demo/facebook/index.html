@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Facebook-style Security Demo</title>
+  <link rel="stylesheet" href="../style.cs">
+  <style>
+    /* Facebook-style UI Overrides */
+    body {
+      background-color: #f0f2f5;
+      font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1c1e21;
+    }
+    .notice {
+      background: #ffdbdb;
+      color: #d8000c;
+      text-align: center;
+      padding: 12px;
+      font-weight: bold;
+      font-size: 14px;
+      border-bottom: 1px solid #f5c6c6;
+    }
+    .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 45px);
+      padding: 20px 0;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      width: 980px;
+      margin: 0 auto;
+      padding-bottom: 112px;
+    }
+    .left-col {
+      width: 580px;
+      padding-right: 32px;
+      box-sizing: border-box;
+    }
+    .brand {
+      color: #1877f2;
+      font-size: 60px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: -2px;
+      margin-left: -3px;
+    }
+    .subtitle {
+      font-size: 28px;
+      line-height: 32px;
+      width: 500px;
+    }
+    .right-col {
+      width: 396px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+      padding: 20px 0;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    #trainingForm {
+      padding: 0 16px;
+    }
+    .field {
+      margin-bottom: 12px;
+    }
+    /* Hide labels visually to match FB style, but keep them for accessibility */
+    .field label {
+      display: none; 
+    }
+    .field input {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 17px;
+      border: 1px solid #dddfe2;
+      border-radius: 6px;
+      box-sizing: border-box;
+      color: #1d2129;
+    }
+    .field input:focus {
+      outline: none;
+      border-color: #1877f2;
+      box-shadow: 0 0 0 2px #e7f3ff;
+    }
+    .button {
+      background-color: #1877f2;
+      border: none;
+      border-radius: 6px;
+      font-size: 20px;
+      line-height: 48px;
+      padding: 0 16px;
+      width: 100%;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+    .button:hover {
+      background-color: #166fe5;
+    }
+    .divider {
+      align-items: center;
+      border-bottom: 1px solid #dadde1;
+      display: flex;
+      margin: 20px 16px;
+      text-align: center;
+    }
+    .safety {
+      font-size: 13px;
+      color: #606770;
+      padding: 0 16px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .status-container {
+      margin-top: 15px;
+      padding: 10px 16px 0;
+      font-size: 12px;
+      color: #8c939d;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+      }
+      .left-col {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 40px;
+      }
+      .subtitle {
+        font-size: 24px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .right-col {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+<body data-platform="facebook">
+  <div class="notice"></div>
+  
+  <main class="wrap">
+    <div class="container">
+      
+      <!-- Left Column: Branding (Facebook Style) -->
+      <div class="left-col">
+        <div class="brand">facebook</div>
+        <div class="subtitle"></div>
+      </div>
+      
+      <!-- Right Column: Login Card -->
+      <div class="right-col">
+        <section class="card">
+          <form id="trainingForm">
+            <div class="field">
+              <label for="demoName">username or mobile number</label>
+              <input id="demoName" autocomplete="off" placeholder="username or mobile number">
+            </div>
+            <div class="field">
+              <label for="trainingCode">Training code</label>
+              <input id="trainingCode" autocomplete="off" placeholder="password">
+            </div>
+            <button class="button" type="submit"> Login</button>
+          </form>
+          
+          <div class="divider"></div>
+          
+          <div class="safety">
+           
+          </div>
+          
+          <div class="status-container">
+            <div class="status" id="status"></div>
+            <div class="event" id="event"></div>
+          </div>
+        </section>
+      </div>
+      
+    </div>
+  </main>
+  
+  <script src="../demo.js"></script>
+</body>
+</html>

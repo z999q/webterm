@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Google-style Security Demo</title>
+  <link rel="stylesheet" href="../style.cs">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Google-style UI Overrides */
+    body {
+      background-color: #f0f4f9;
+      font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1f1f1f;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .notice {
+      background: #f8d7da;
+      color: #842029;
+      text-align: center;
+      padding: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      border-bottom: 1px solid #f5c2c7;
+      letter-spacing: 0.5px;
+    }
+    .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      padding: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 36px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .brand-logo {
+      font-family: 'Product Sans', 'Open Sans', sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    /* Google Colors for the logo text */
+    .c-blue { color: #4285F4; }
+    .c-red { color: #EA4335; }
+    .c-yellow { color: #FBBC05; }
+    .c-green { color: #34A853; }
+    
+    .subtitle {
+      font-size: 16px;
+      color: #444746;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+    
+    /* Input Fields */
+    #trainingForm {
+      text-align: left;
+    }
+    .field {
+      position: relative;
+      margin-bottom: 24px;
+    }
+    .field label {
+      display: none; /* Hidden for pure styling, placeholder takes over */
+    }
+    .field-icon {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      color: #444746;
+      font-size: 20px;
+    }
+    .field input {
+      width: 100%;
+      padding: 16px 16px 16px 48px;
+      font-size: 16px;
+      border: 1px solid #747775;
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: #1f1f1f;
+      background: transparent;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .field input::placeholder {
+      color: #747775;
+    }
+    .field input:focus {
+      outline: none;
+      border-color: #0b57d0;
+      border-width: 2px;
+      padding: 15px 15px 15px 47px; /* Adjust padding to prevent jumping when border thickens */
+    }
+    
+    /* Button Area */
+    .action-row {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 32px;
+      margin-bottom: 24px;
+    }
+    .button {
+      background-color: #0b57d0;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      padding: 10px 24px;
+      color: #fff;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s, box-shadow 0.2s;
+    }
+    .button:hover {
+      background-color: #0842a0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    }
+    
+    /* Safety & Status */
+    .safety {
+      font-size: 12px;
+      color: #444746;
+      text-align: left;
+      line-height: 1.5;
+      padding-top: 16px;
+      border-top: 1px solid #e3e3e3;
+    }
+    .status-container {
+      margin-top: 16px;
+      text-align: left;
+      font-size: 12px;
+      color: #747775;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 480px) {
+      .card {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 24px 20px;
+        background: transparent;
+      }
+      body {
+        background-color: #ffffff;
+      }
+    }
+  </style>
+</head>
+<body data-platform="google">
+  <div class="notice"></div>
+  
+  <main class="wrap">
+    <section class="card">
+      
+      <div class="brand-logo">
+        <span class="c-blue">G</span><span class="c-red">o</span><span class="c-yellow">o</span><span class="c-blue">g</span><span class="c-green">l</span><span class="c-red">e</span>
+      </div>
+      <div class="subtitle"></div>
+      
+      <form id="trainingForm">
+        <div class="field">
+          <label for="demoName">Training name</label>
+          <i class="bi bi-person field-icon"></i>
+          <input id="demoName" autocomplete="off" placeholder="gmail">
+        </div>
+        
+        <div class="field">
+          <label for="trainingCode">Training code</label>
+          <i class="bi bi-shield-lock field-icon"></i>
+          <input id="trainingCode" autocomplete="off" placeholder="password">
+        </div>
+        
+        <div class="action-row">
+          <button class="button" type="submit">Demo Login</button>
+        </div>
+      </form>
+      
+      <div class="safety">
+       
+      </div>
+      
+      <div class="status-container">
+        <div class="status" id="status"></div>
+        <div class="event" id="event">.</div>
+      </div>
+      
+    </section>
+  </main>
+  
+  <script src="../demo.js"></script>
+</body>
+</html>
